@@ -1,0 +1,19 @@
+{
+  "name": "gsapportfolio",
+  "version": "1.0.0",
+  "description": "Carlos Del Valle Portfolio (3D featured version)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Carlos-Del-Valle/GSAPportfolio.git"
+  },
+  "author": "Carlos Del Valle",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Carlos-Del-Valle/GSAPportfolio/issues"
+  },
+  "homepage": "https://github.com/Carlos-Del-Valle/GSAPportfolio#readme"
+}
