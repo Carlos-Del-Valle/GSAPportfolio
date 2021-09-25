@@ -6,7 +6,8 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 const NodePolyfillPlugin = require("node-polyfill-webpack-plugin") //
-
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const TerserPlugin = require("terser-webpack-plugin")
 const IS_DEVELOPMENT = process.env.NODE_ENV === 'dev'
 
 const dirApp = path.join (__dirname, 'app')
@@ -67,8 +68,9 @@ module.exports = {
                 },
             }),
 
-            new NodePolyfillPlugin() //
+            new NodePolyfillPlugin(), //
 
+            new CleanWebpackPlugin() //
         ],
 
     module: {
@@ -136,5 +138,10 @@ module.exports = {
                     exclude: /node_modules/
                 }
             ]
-    }
+    },
+
+  optimization: {
+    minimize: true,
+    minimizer: [new TerserPlugin()]
+  }
 }
