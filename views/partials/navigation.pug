@@ -1,15 +1,11 @@
 nav.navigation
   .navigation_wrapper
-    a.navigation_link(href="/")
-      | Carlos Del Valle
-
+    a.navigation_link(href="/")=meta.data.title
       svg.navigation_link_icon
 
     ul.navigation_list
-      li.navigation_list_item
-        a.navigation_list_link(href="/about") About
-
-      li.navigation_list_item
-        a.navigation_list_link(href="/collections") Collections
+      each item in navigation.data.list
+        li.navigation_list_item
+          a.navigation_list_link(href=Link(item.link))=item.text
 
 
