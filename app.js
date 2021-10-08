@@ -15,9 +15,12 @@ const port = 3000
 
 app.use(logger('dev'))
 app.use(errorHandler())
+app.use(express.static(path.join(__dirname, 'public')))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extend: false }))
 app.use(methodOverride())
+
+app.use(express.static('public'))
 
 const Prismic = require('@prismicio/client')
 const PrismicDOM = require('prismic-dom')
