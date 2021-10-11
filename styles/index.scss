@@ -1,3 +1,5 @@
+@import "./base/reset"; //Carlos del futuro, mant'en esto aqu'i.
+
 @import "./utils/variables";
 @import "./utils/functions";
 @import "./utils/mixins";
@@ -5,11 +7,18 @@
 @import "./utils/responsive";
 
 @import "./shared/descriptions";
+@import './shared/links';
+@import './shared/pages';
 @import "./shared/titles";
+@import './shared/vertical-titles';
 
 @import "./base/fonts";
-@import "./base/reset";
 @import "./base/base";
+
+@import "./components/preloader";
+@import './components/transition'; //
+
+@import './layout/navigation';
 
 @import "./pages/about/about";
 @import "./pages/about/content";
